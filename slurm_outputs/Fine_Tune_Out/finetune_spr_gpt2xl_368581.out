@@ -1,0 +1,36 @@
+Job Started: Tue May 13 16:06:15 AEST 2025
+Job ID: 368581
+Running on node(s): gina2
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 1 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Launching training with Accelerate...
+ERROR: llms_finetune.py failed with exit code 1
+Job Ended: Tue May 13 16:10:41 AEST 2025
+
++-------------------- Job Report: 368581 (FAILED) ---------------------+
+| Memory (RAM)  [                    ]  4.0% (658.8 MB peak / 16 GB)   |
+| CPU           [                    ]  0.3% average                   |
+| GPU           [                    ]  0.0% average                   |
+| Time          [->                  ]  7.7% (0-00:04:37 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write    Total IOPS                    |
+|   ------  ------------  -------------  ------------                  |
+|   /apps   0 B           0 B            1                             |
+|   /fred   312.4 MB      3 KB           17.9 K                        |
+|   /home   4 KB          1 B            831                           |
+|   OS      4 KB          0 B            9                             |
+|                                                                      |
+| Warnings:                                                            |
+|   - Too much memory requested                                        |
+|   - CPU usage is low                                                 |
+|   - GPU usage is low                                                 |
+|   - Too much time requested                                          |
++----------------------------------------------------------------------+

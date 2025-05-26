@@ -1,0 +1,5 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/jobfs/local/slurm/job353616/slurm_script: line 44: activate: No such file or directory

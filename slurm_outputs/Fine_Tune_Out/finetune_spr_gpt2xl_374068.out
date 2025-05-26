@@ -1,0 +1,34 @@
+Job Started: Tue May 13 17:15:43 AEST 2025
+Job ID: 374068
+Running on node(s): gina9
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 0 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Launching training with Accelerate...
+[05/13/25 17:15:53] INFO     Model is not llama, disabling  llms_finetune.py:101
+                             flash attention...                                 
+[05/13/25 17:15:54] INFO     Pad token id is None, setting  llms_finetune.py:135
+                             to eos token id...                                 
+                    INFO     Using a block size of 128      llms_finetune.py:139
+                    INFO     Using no quantization          llms_finetune.py:157
+ERROR: llms_finetune.py failed with exit code 1
+Job Ended: Tue May 13 17:15:55 AEST 2025
+
++-------------------- Job Report: 374068 (FAILED) ---------------------+
+| Memory (RAM)  No data available                                      |
+| CPU           [                    ]  2.6% average                   |
+| GPU           [################    ] 82.0% average                   |
+| Time          [>                   ]  0.7% (0-00:00:24 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write      Total IOPS                  |
+|   ------  ------------  -------------  ------------                  |
+|   /apps   0 B           0 B                      1                   |
+|   OS      0 B           0 B                      3                   |
++----------------------------------------------------------------------+

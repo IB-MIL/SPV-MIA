@@ -1,0 +1,39 @@
+Job Started: Tue May 13 17:18:58 AEST 2025
+Job ID: 374071
+Running on node(s): gina9
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 0 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Launching training with Accelerate...
+[05/13/25 17:19:09] INFO     Model is not llama, disabling  llms_finetune.py:101
+                             flash attention...                                 
+                    INFO     Pad token id is None, setting  llms_finetune.py:134
+                             to eos token id...                                 
+                    INFO     Using a block size of 128      llms_finetune.py:138
+                    INFO     Using no quantization          llms_finetune.py:156
+[05/13/25 17:19:33] INFO     Using PEFT...                  llms_finetune.py:197
+                    INFO     Getting PEFT model...          llms_finetune.py:205
+trainable params: 19660800 || all params: 1577272000 || trainable%: 1.2465066266312976
+ERROR: llms_finetune.py failed with exit code 1
+Job Ended: Tue May 13 17:19:38 AEST 2025
+
++-------------------- Job Report: 374071 (FAILED) ---------------------+
+| Memory (RAM)  [########            ] 40.9% (6.5 GB peak / 16 GB)     |
+| CPU           [                    ]  4.0% average                   |
+| GPU           [                    ]  0.0% average                   |
+| Time          [>                   ]  1.5% (0-00:00:53 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write    Total IOPS                    |
+|   ------  ------------  -------------  ------------                  |
+|   /apps   0 B           0 B            3                             |
+|   /fred   636 KB        4.5 KB         7 K                           |
+|   /home   0 B           0 B            822                           |
+|   OS      0 B           0 B            9                             |
++----------------------------------------------------------------------+

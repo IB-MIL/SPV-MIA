@@ -1,0 +1,77 @@
+Job Started: Mon May 19 16:14:31 AEST 2025
+Job ID: 453414
+Running on node(s): gina3
+Allocated CPUs: 8
+Allocated Memory: 65536 MB
+Allocated GPU(s) Raw: 2 (using GRES: )
+CUDA_VISIBLE_DEVICES: 0
+Attempting to load system Mamba module...
+Conda (mamba) command found at: conda ()
+{ 
+    \local cmd="${1-__missing__}";
+    case "$cmd" in 
+        activate | deactivate)
+            __conda_activate "$@"
+        ;;
+        install | update | upgrade | remove | uninstall)
+            __conda_exe "$@" || \return;
+            __conda_reactivate
+        ;;
+        *)
+            __conda_exe "$@"
+        ;;
+    esac
+}
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+PyTorch CUDA available: True
+Number of GPUs PyTorch sees: 1
+Mon May 19 16:14:35 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   26C    P0             57W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Launching training with Accelerate...
+[05/19/25 16:14:43] INFO     Model is not llama, disabling  llms_finetune.py:102
+                             flash attention...                                 
+                    INFO     Pad token id is None, setting  llms_finetune.py:136
+                             to eos token id...                                 
+                    INFO     Using a block size of 128      llms_finetune.py:140
+                    INFO     Using no quantization          llms_finetune.py:158
+[05/19/25 16:14:55] INFO     Using PEFT...                  llms_finetune.py:199
+                    INFO     Getting PEFT model...          llms_finetune.py:207
+trainable params: 19660800 || all params: 1577272000 || trainable%: 1.2465066266312976
+ERROR: llms_finetune.py failed with exit code 1
+Job Ended: Mon May 19 16:14:59 AEST 2025
+
++-------------------- Job Report: 453414 (FAILED) ---------------------+
+| Memory (RAM)  No data available                                      |
+| CPU           [#                   ]  5.5% average                   |
+| GPU           [                    ]  0.0% average                   |
+| Time          [-->                 ] 14.3% (0-00:00:43 / 0-00:05:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write    Total IOPS                    |
+|   ------  ------------  -------------  ------------                  |
+|   /apps   0 B           0 B            18                            |
+|   /fred   0 B           4.4 KB         2.3 K                         |
+|   /home   0 B           0 B            3                             |
+|   OS      0 B           0 B            13                            |
++----------------------------------------------------------------------+

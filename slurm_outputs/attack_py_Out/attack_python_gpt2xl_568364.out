@@ -1,0 +1,62 @@
+Job Started: Fri May 23 16:00:41 AEST 2025
+Job ID: 568364
+Running on node(s): gina13
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 2 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Running attack.py...
+False
+
+===================================BUG REPORT===================================
+================================================================================
+The following directories listed in your path were found to be non-existent: {PosixPath('1'), PosixPath('1;/opt/module/modulefiles'), PosixPath('1;/apps/modules/modulefiles/all/core'), PosixPath('1;/apps/modules/modulefiles/all/toolchain')}
+The following directories listed in your path were found to be non-existent: {PosixPath('1;/usr/local/bin'), PosixPath('1;/apps/slurm/latest/bin'), PosixPath('1'), PosixPath('1;/usr/bin'), PosixPath('1;/usr/sbin'), PosixPath('1;/usr/local/sbin'), PosixPath('1;/opt/nvidia/latest/usr/bin'), PosixPath('1;/home/qhoat/miniconda3/condabin')}
+The following directories listed in your path were found to be non-existent: {PosixPath('1'), PosixPath('1;/opt/nvidia/latest/usr/lib64')}
+The following directories listed in your path were found to be non-existent: {PosixPath('nvidia/.latest'), PosixPath('slurm/.latest')}
+The following directories listed in your path were found to be non-existent: {PosixPath('1'), PosixPath('1;/opt/nvidia/latest/usr/share/man'), PosixPath('1;/apps/system/lmod/lmod/share/man')}
+The following directories listed in your path were found to be non-existent: {PosixPath('1'), PosixPath('1;/apps/slurm/latest/lib/slurm'), PosixPath('1;/opt/nvidia/latest/usr/lib64')}
+The following directories listed in your path were found to be non-existent: {PosixPath('() {  eval "$($LMOD_DIR/ml_cmd "$@")"\n}')}
+The following directories listed in your path were found to be non-existent: {PosixPath('() {  ( alias;\n eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@\n}')}
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+DEBUG: Possible options found for libcudart.so: {PosixPath('/usr/local/cuda/lib64/libcudart.so')}
+CUDA SETUP: PyTorch settings found: CUDA_VERSION=124, Highest Compute Capability: 8.0.
+CUDA SETUP: To manually override the PyTorch CUDA version please see:https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+CUDA SETUP: Required library version not found: libbitsandbytes_cuda124.so. Maybe you need to compile it from source?
+CUDA SETUP: Defaulting to libbitsandbytes_cpu.so...
+
+================================================ERROR=====================================
+CUDA SETUP: CUDA detection failed! Possible reasons:
+1. You need to manually override the PyTorch CUDA version. Please see: "https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+2. CUDA driver not installed
+3. CUDA not installed
+4. You have multiple conflicting CUDA libraries
+5. Required library not pre-compiled for this bitsandbytes release!
+CUDA SETUP: If you compiled from source, try again with `make CUDA_VERSION=DETECTED_CUDA_VERSION` for example, `make CUDA_VERSION=113`.
+CUDA SETUP: The CUDA version for the compile might depend on your conda install. Inspect CUDA version via `conda list | grep cuda`.
+================================================================================
+
+CUDA SETUP: Something unexpected happened. Please compile from source:
+git clone https://github.com/TimDettmers/bitsandbytes.git
+cd bitsandbytes
+CUDA_VERSION=124
+python setup.py install
+CUDA SETUP: Setup Failed!
+ERROR: attack.py failed with exit code 1
+Job Ended: Fri May 23 16:00:55 AEST 2025
+
++-------------------- Job Report: 568364 (FAILED) ---------------------+
+| Memory (RAM)  [                    ]  0.0% (80 KB peak / 16 GB)      |
+| CPU           [                    ]  1.7% average                   |
+| Time          [>                   ]  0.8% (0-00:00:29 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write      Total IOPS                  |
+|   ------  ------------  -------------  ------------                  |
+|   OS      0 B           0 B                      5                   |
++----------------------------------------------------------------------+

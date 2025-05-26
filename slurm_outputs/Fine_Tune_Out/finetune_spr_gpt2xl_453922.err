@@ -1,0 +1,44 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+mamba:
+   - Mamba is a drop-in replacement for conda, offering higher speed and
+   more reliable environment solutions. - Do you really need conda/mamba??
+   Do you know about python virtual environments??? We HIGHLY recommend
+   using virtual envs instead. e.g. python -m venv my-environment - Remember
+   you can change where conda environemnts are created (if you run out of
+   space in your home directory) ``` $ conda config --env --prepend
+   envs_dirs /path/to/my/project/on/fred/.conda/envs $ conda config --env
+   --prepend pkgs_dirs /path/to/my/project/on/fred/.conda/pkgs ``` - To hide
+   this message in the future, load the module with -q ``` $ module -q load
+   conda ```
+
+-------------------------------------------------------------------------------
+
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/tuners/lora.py:475: UserWarning: fan_in_fan_out is set to False but the target module is `Conv1D`. Setting fan_in_fan_out to True.
+  warnings.warn(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:166: UserWarning: You didn't pass a `max_seq_length` argument to the SFTTrainer, this will default to 1024
+  warnings.warn(
+Map:   0%|          | 0/10000 [00:00<?, ? examples/s]Map:  10%|█         | 1000/10000 [00:00<00:01, 5352.00 examples/s]Map:  30%|███       | 3000/10000 [00:00<00:00, 9439.15 examples/s]Map:  50%|█████     | 5000/10000 [00:00<00:00, 11080.01 examples/s]Map:  70%|███████   | 7000/10000 [00:00<00:00, 11994.87 examples/s]Map:  90%|█████████ | 9000/10000 [00:00<00:00, 12529.94 examples/s]Map: 100%|██████████| 10000/10000 [00:00<00:00, 11551.19 examples/s]
+Map:   0%|          | 0/1000 [00:00<?, ? examples/s]Map: 100%|██████████| 1000/1000 [00:00<00:00, 13512.58 examples/s]
+wandb: Network error (ProxyError), entering retry loop.
+wandb: W&B API key is configured. Use `wandb login --relogin` to force relogin
+wandb: Network error (ProxyError), entering retry loop.
+slurmstepd: error: *** JOB 453922 ON gina14 CANCELLED AT 2025-05-19T17:09:58 ***

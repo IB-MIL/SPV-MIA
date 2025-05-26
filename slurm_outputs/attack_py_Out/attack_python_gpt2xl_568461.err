@@ -1,0 +1,16 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+Traceback (most recent call last):
+  File "/fred/oz413/ANeurIPS2024_SPV-MIA/attack.py", line 53, in <module>
+    target_model = AutoModelForCausalLM.from_pretrained(cfg["target_model"], quantization_config=BitsAndBytesConfig(load_in_8bit=True),
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 565, in from_pretrained
+    return model_class.from_pretrained(
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 2614, in from_pretrained
+    raise ImportError(
+ImportError: Using `load_in_8bit=True` requires Accelerate: `pip install accelerate` and the latest version of bitsandbytes `pip install -i https://test.pypi.org/simple/ bitsandbytes` or pip install bitsandbytes` 

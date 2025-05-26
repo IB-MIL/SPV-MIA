@@ -1,0 +1,8 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/jobfs/local/slurm/job367327/slurm_script: line 43: /fred/oz413/.conda/etc/profile.d/conda.sh: No such file or directory
+
+CondaError: Run 'conda init' before 'conda activate'
+

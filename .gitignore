@@ -1,0 +1,50 @@
+
+# Ignore big model/dataset files
+*.arrow
+Miniconda3-latest-Linux-x86_64.sh
+
+# Or ignore entire directories if needed
+LLM/
+
+# Huggingface model cache and downloaded weights
+LLM/hf_hub_cache/
+LLM/huggingface/
+
+**/hf_hub_cache/
+**/huggingface/
+
+# Ignore conda environments and system files
+.conda/
+_conda/
+conda-meta/
+pkgs/
+*.tar.bz2
+*.pt
+*.bin
+*.zip
+*.h5
+*.pkl
+*.log
+*.lock
+*.tmp
+__pycache__/
+*.pyc
+.DS_Store
+.env
+# Ignore model weights and caches
+*.tar.bz2
+*.pt
+*.bin
+*.zip
+*.h5
+*.pkl
+*.log
+*.lock
+*.tmp
+__pycache__/
+*.pyc
+pkgs/
+_conda/
+conda-meta/
+
+

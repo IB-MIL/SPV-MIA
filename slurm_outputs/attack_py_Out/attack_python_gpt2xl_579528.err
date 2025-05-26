@@ -1,0 +1,8 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/jobfs/local/slurm/job579528/slurm_script: line 43: /home/qhoat/miniconda3/etc/profile.d/conda.sh: Permission denied
+
+CondaError: Run 'conda init' before 'conda activate'
+

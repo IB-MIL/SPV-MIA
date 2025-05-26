@@ -1,0 +1,29 @@
+Job Started: Fri May 23 16:15:39 AEST 2025
+Job ID: 568509
+Running on node(s): gina12
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 1 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Running attack.py...
+ERROR: attack.py failed with exit code 1
+Job Ended: Fri May 23 16:16:01 AEST 2025
+
++-------------------- Job Report: 568509 (FAILED) ---------------------+
+| Memory (RAM)  [                    ]  0.0% (20 KB peak / 16 GB)      |
+| CPU           [                    ]  3.7% average                   |
+| GPU           [                    ]  0.0% average                   |
+| Time          [>                   ]  0.9% (0-00:00:34 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write      Total IOPS                  |
+|   ------  ------------  -------------  ------------                  |
+|   /fred   0 B           0 B                      3                   |
+|   /home   0 B           0 B                    235                   |
+|   OS      0 B           0 B                      4                   |
++----------------------------------------------------------------------+

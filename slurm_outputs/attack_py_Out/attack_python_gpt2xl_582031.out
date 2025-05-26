@@ -1,0 +1,27 @@
+Job Started: Fri May 23 18:00:07 AEST 2025
+Job ID: 582031
+Running on node(s): gina2
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 0 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Running attack.py...
+hello world
+Attack script completed successfully.
+Job Ended: Fri May 23 18:00:13 AEST 2025
+
++------------------- Job Report: 582031 (COMPLETED) -------------------+
+| Memory (RAM)  [                    ]  0.0% (16 KB peak / 16 GB)      |
+| CPU           [                    ]  1.2% average                   |
+| Time          [>                   ]  0.6% (0-00:00:20 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write      Total IOPS                  |
+|   ------  ------------  -------------  ------------                  |
+|   OS      0 B           0 B                      2                   |
++----------------------------------------------------------------------+

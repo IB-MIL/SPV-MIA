@@ -1,0 +1,63 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:166: UserWarning: Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+
+  warn(msg)
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:166: UserWarning: /fred/oz413/.conda/envs/llm-env did not contain ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] as expected! Searching further paths...
+  warn(msg)
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/cuda_setup/main.py:166: UserWarning: /apps/slurm/latest/lib:/apps/slurm/latest/lib/slurm:/opt/nvidia/latest/usr/lib64 did not contain ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] as expected! Searching further paths...
+  warn(msg)
+Traceback (most recent call last):
+  File "/fred/oz413/ANeurIPS2024_SPV-MIA/attack.py", line 18, in <module>
+    import trl
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/__init__.py", line 7, in <module>
+    from .extras import BestOfNSampler
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/extras/__init__.py", line 16, in <module>
+    from .best_of_n_sampler import BestOfNSampler
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/extras/best_of_n_sampler.py", line 7, in <module>
+    from ..models import SUPPORTED_ARCHITECTURES, PreTrainedModelWrapper
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/models/__init__.py", line 16, in <module>
+    from .modeling_base import PreTrainedModelWrapper, create_reference_model
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/trl/models/modeling_base.py", line 30, in <module>
+    from peft import (
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/__init__.py", line 22, in <module>
+    from .auto import (
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/auto.py", line 31, in <module>
+    from .mapping import MODEL_TYPE_TO_PEFT_MODEL_MAPPING
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/mapping.py", line 23, in <module>
+    from .peft_model import (
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/peft_model.py", line 38, in <module>
+    from .tuners import (
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/tuners/__init__.py", line 21, in <module>
+    from .lora import LoraConfig, LoraModel
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/peft/tuners/lora.py", line 45, in <module>
+    import bitsandbytes as bnb
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/__init__.py", line 6, in <module>
+    from . import cuda_setup, utils, research
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/research/__init__.py", line 1, in <module>
+    from . import nn
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/research/nn/__init__.py", line 1, in <module>
+    from .modules import LinearFP8Mixed, LinearFP8Global
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/research/nn/modules.py", line 8, in <module>
+    from bitsandbytes.optim import GlobalOptimManager
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/optim/__init__.py", line 6, in <module>
+    from bitsandbytes.cextension import COMPILED_WITH_CUDA
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 20, in <module>
+    raise RuntimeError('''
+RuntimeError: 
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues

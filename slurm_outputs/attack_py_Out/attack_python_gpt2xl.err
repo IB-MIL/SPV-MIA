@@ -1,0 +1,31 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) nvidia/.latest   2) slurm/.latest
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+Traceback (most recent call last):
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/mnt/data0/fuwenjie/MIA-LLMs/cache/models--decapoda-research--llama-7b-hf/snapshots/5f98eefcc80e437ef68d457ad7bf167c2c6a1348'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fred/oz413/ANeurIPS2024_SPV-MIA/attack.py", line 56, in <module>
+    config=AutoConfig.from_pretrained(cfg["model_name"]),
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1034, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/transformers/configuration_utils.py", line 696, in _get_config_dict
+    raise EnvironmentError(
+OSError: Can't load the configuration of '/mnt/data0/fuwenjie/MIA-LLMs/cache/models--decapoda-research--llama-7b-hf/snapshots/5f98eefcc80e437ef68d457ad7bf167c2c6a1348'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/mnt/data0/fuwenjie/MIA-LLMs/cache/models--decapoda-research--llama-7b-hf/snapshots/5f98eefcc80e437ef68d457ad7bf167c2c6a1348' is the correct path to a directory containing a config.json file

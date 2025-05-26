@@ -1,0 +1,38 @@
+Job Started: Fri May 23 16:55:46 AEST 2025
+Job ID: 579498
+Running on node(s): gina12
+Partition: milan-gpu
+Allocated CPUs: 8
+Allocated Memory: 16384 MB
+Allocated GPU(s): 1 (using GRES: )
+Loading modules...
+Activating Conda env: llm-env
+Python location: /fred/oz413/.conda/envs/llm-env/bin/python
+Python version: Python 3.10.16
+Working directory: /fred/oz413/ANeurIPS2024_SPV-MIA
+Running attack.py...
+DEBUG: args object in dataset_prepare: {'random_seed': 48, 'model_name': '/fred/oz413/LLM/huggingface/hub/models--gpt2-xl', 'target_model': '/fred/oz413/ANeurIPS2024_SPV-MIA/ft_llms/gpt2-xl/ag_news/baseline/checkpoint-5000', 'reference_model': '/fred/oz413/ANeurIPS2024_SPV-MIA/ft_llms/gpt2-xl/ag_news/baseline/checkpoint-400', 'dataset_name': 'ag_news', 'dataset_config_name': 'config.json', 'cache_path': './cache', 'use_dataset_cache': True, 'packing': True, 'calibration': True, 'add_eos_token': False, 'add_bos_token': False, 'pad_token_id': None, 'attack_kind': 'stat', 'eval_batch_size': 1, 'maximum_samples': 200, 'block_size': 128, 'validation_split_percentage': 0.1, 'preprocessing_num_workers': 1, 'mask_filling_model_name': 't5-base', 'buffer_size': 1, 'mask_top_p': 1.0, 'span_length': 2, 'pct': 0.3, 'ceil_pct': False, 'int8': False, 'half': False, 'perturbation_number': 1, 'sample_number': 10, 'train_sta_idx': 0, 'train_end_idx': 10000, 'eval_sta_idx': 0, 'eval_end_idx': 1000, 'attack_data_path': 'attack', 'load_attack_data': False}
+Found dataset at root path (no specific config subdir): /fred/oz413/LLM/ag_news
+Loading dataset from disk: /fred/oz413/LLM/ag_news
+ERROR: attack.py failed with exit code 1
+Job Ended: Fri May 23 16:57:38 AEST 2025
+
++-------------------- Job Report: 579498 (FAILED) ---------------------+
+| Memory (RAM)  [######              ] 34.1% (5.4 GB peak / 16 GB)     |
+| CPU           [#                   ]  8.0% average                   |
+| GPU           [###                 ] 15.2% average                   |
+| Time          [>                   ]  3.6% (0-00:02:08 / 0-01:00:00) |
+|                                                                      |
+| Lustre Filesystem:                                                   |
+|   Path    Total Read    Total Write    Total IOPS                    |
+|   ------  ------------  -------------  ------------                  |
+|   /fred   415.5 MB      8.1 KB         4.5 K                         |
+|   /home   4 KB          0 B            820                           |
+|   OS      0 B           0 B            7                             |
+|                                                                      |
+| Warnings:                                                            |
+|   - Too much memory requested                                        |
+|   - CPU usage is low                                                 |
+|   - GPU usage is low                                                 |
+|   - Too much time requested                                          |
++----------------------------------------------------------------------+
