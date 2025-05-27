@@ -1,4 +1,9 @@
 
+# SLurm outputs
+*.out
+*.err
+slurm_outputs/
+
 # Ignore big model/dataset files
 *.arrow
 Miniconda3-latest-Linux-x86_64.sh
