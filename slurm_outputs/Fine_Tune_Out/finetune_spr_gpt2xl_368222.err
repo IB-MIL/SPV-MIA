@@ -1,7 +1,0 @@
-The following modules were not unloaded:
-  (Use "module --force purge" to unload all):
-
-  1) nvidia/.latest   2) slurm/.latest
-/fred/oz413/.conda/envs/llm-env/lib/python3.10/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
-  warnings.warn("Can't initialize NVML")
-slurmstepd: error: *** JOB 368222 ON dave13 CANCELLED AT 2025-05-13T15:47:06 DUE TO TIME LIMIT ***

@@ -1,4 +1,0 @@
-/jobfs/local/slurm/job353727/slurm_script: line 12: /home/asayes/Miniconda3/etc/profile.d/conda.sh: No such file or directory
-
-CondaError: Run 'conda init' before 'conda activate'
-
